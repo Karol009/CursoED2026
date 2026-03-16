@@ -1,0 +1,48 @@
+#include <stdio.h>
+#include <math.h>
+#include "areas.h"
+#include "volumenes.h"
+
+/* Funciones de áreas */
+
+float areaCirculo(float radio){
+    return 3.1416 * radio * radio;
+}
+
+float areaCuadrado(float lado){
+    return lado * lado;
+}
+
+/* Funciones de volumen */
+
+float volumenEsfera(float radio){
+    return (4.0/3.0) * 3.1416 * radio * radio * radio;
+}
+
+float volumenCubo(float lado){
+    return lado * lado * lado;
+}
+
+int main(){
+
+    float radio, lado;
+
+    printf("Calculadora de Geometria\n");
+    printf("------------------------\n");
+
+    printf("Ingrese el radio del circulo y esfera: ");
+    scanf("%f", &radio);
+
+    printf("Ingrese el lado del cuadrado y cubo: ");
+    scanf("%f", &lado);
+
+    printf("\nResultados:\n");
+
+    printf("Area del circulo: %.2f\n", areaCirculo(radio));
+    printf("Area del cuadrado: %.2f\n", areaCuadrado(lado));
+
+    printf("Volumen de la esfera: %.2f\n", volumenEsfera(radio));
+    printf("Volumen del cubo: %.2f\n", volumenCubo(lado));
+
+    return 0;
+}
